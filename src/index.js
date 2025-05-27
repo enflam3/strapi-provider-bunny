@@ -47,6 +47,8 @@ const init = ({ api_key, storage_zone, pull_zone, hostname, upload_path }) => {
             AccessKey: api_key,
             'content-type': 'application/octet-stream',
           },
+          maxBodyLength: Infinity,
+          maxContentLength: Infinity,
         },
       );
 
@@ -83,6 +85,8 @@ const init = ({ api_key, storage_zone, pull_zone, hostname, upload_path }) => {
             AccessKey: api_key,
           },
           responseType: 'arraybuffer', // Para manejar diferentes tipos de archivos
+          maxBodyLength: Infinity,
+          maxContentLength: Infinity,
         },
       );
 
